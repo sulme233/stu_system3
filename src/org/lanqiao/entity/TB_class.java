@@ -6,6 +6,7 @@ public class TB_class {
     }
 
     private void aa() {
+        int a;
 
     }
 }
