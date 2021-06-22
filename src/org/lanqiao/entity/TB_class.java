@@ -5,4 +5,7 @@ public class TB_class {
         System.out.println("111");
     }
 
+    private void aa() {
+
+    }
 }
