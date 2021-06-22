@@ -7,6 +7,6 @@ public class TB_class {
 
     private void aa() {
         int a;
-
+        int b;
     }
 }
