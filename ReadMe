@@ -1,0 +1,92 @@
+项目的包结构：
+dao			- 这个包存放“数据持久层类”
+entity		- 这个包存放“实体类”，这些实体类只存放一些属性（这些属性保持与数据库的表结构映射关系）
+view（swing的窗体类）
+util（工具类）
+
+-----------------------------一些常用的控件类-----------------------------------
+JFrame			窗口
+JLabel			普通文本/普通标签
+JButton			按钮
+JTextField		文本框
+JPasswordField	密码框
+JRadioButton	单选按钮
+
+jDesktopPane	桌面容器（可以在该容器中显示多个子窗口）
+
+
+-----------------------------一些常用的事件-----------------------------------
+//给btn_login控件，绑定了一个mouseClicked事件
+控件对象.addXXXXXXListener(new java.awt.event.xxxxAdapter() {
+	public void 事件名(java.awt.event.MouseEvent evt) {
+		事件执行时要调用的方法(evt);
+	}
+});
+
+
+mouseClicked		鼠标单击事件
+keyPressed			键盘按下事件
+
+
+
+----------------------------------------------------------------
+initComponents()方法				-- 初始化当前窗体上的所有组件
+
+
+/*
+swing窗口的main方法中的代码：
+java.awt.EventQueue.invokeLater(new Runnable() {
+	public void run() {
+		new 窗口类().setVisible(true);
+	}
+});
+*/
+
+
+
+//设置窗口居中
+this.setLocationRelativeTo(null);
+
+//窗口是否允许改变大小
+找到属性区resiable
+
+//设置窗口是否显示true/false
+窗口对象.setVisible(true);
+
+//弹出消息提示框
+JOptionPane.showMessageDialog(null, "登录成功");
+
+//销毁当前窗口对象
+this.dispose();
+
+
+//获取普通文本框的内容（TextField）
+getText()   返回String类型的数据
+
+//获取密码文本框的内容（PasswordField）
+getPassword()   返回char[]数组类型的数据
+
+
+//将char数组的数据转换成String类型的数据
+String str = new String(char数组);
+
+
+//将窗口添加至桌面容器中显示
+桌面窗口控件.add(子窗口对象);
+
+
+---------------------------------------------------
+【MySQL】从数据库中查询出来的count(*)值，对应java的数据类型是long
+【Oracle】从数据库中查询出来的count(*)值，对应java的数据类型是BigDecimal
+
+
+
+
+
+
+
+
+
+
+
+
